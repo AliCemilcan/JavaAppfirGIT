@@ -10,12 +10,27 @@ package ca.sheridancollege.week2.softwarefundamentals;
  * @author Ali Hassan
  */
 public class Card {
+
     private String suit;
     private int value;
-    
-    public Card (String s, int v){
+
+    public Card(String s, int v) {
         suit = s;
         value = v;
+
+        if (s.equals("Heart") || s.equals("Spades") || s.equals("Diamonds") || s.equals("Clubs")) {
+            System.out.println("The parameters are valus");
+        } else {
+            System.out.println("The suir is invalid"
+                    + "Choose a valid Option : Heart, Spades , Clubs, Diamonds");
+        }
+
+        if (v > 0 && v < 14) {
+            System.out.println("The card value is valid");
+
+        } else {
+            System.out.println("Choose valid card value between1 - 13");
+        }
     }
 
     /**
@@ -36,6 +51,7 @@ public class Card {
      * @return the value
      */
     public int getValue() {
+
         return value;
     }
 
@@ -45,5 +61,5 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-    
+
 }
